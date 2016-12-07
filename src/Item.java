@@ -1,8 +1,8 @@
-package production_unitTesting;
+//package production_unitTesting;
 
 
 /**
- * @author Wangyang Xu
+ * @author Wangyang Xu, Nicholas Barnes
  * establish an item database, including the basic imformation about the item.
  */
  
