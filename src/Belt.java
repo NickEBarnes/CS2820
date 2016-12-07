@@ -24,11 +24,52 @@ public interface Belt {
   String pick1 = pickBelt[0].getName();
   String pick2 = pickBelt[1].getName();
   String pick3 = pickBelt[2].getName();
-  String pack1 = pickBelt[3].getName();
-  String pack2 = pickBelt[4].getName();
-  String pack3 = pickBelt[5].getName();
+  String pack1 = packBelt[3].getName();
+  String pack2 = packBelt[4].getName();
+  String pack3 = packBelt[5].getName();
+  public static Point startPick = pickBelt[0];
+  public static Point startPack = packBelt[3];
+  public static Point endPick = pickBelt[2];
+  public static Point endPack = packBelt[5];
   
-  public void tick(int count);
+  public Belt(){
+	  Point curr1 = pickBelt[0];
+	  Point curr2 = pickBelt[1];
+	  Point curr3 = pickBelt[2];
+	  Point pickHold;
+	  System.out.println("Belt spot 1: " + pick1);
+	  System.out.println("Belt spot 2: " + pick2);
+	  System.out.println("Belt spot 3: " + pick3);
+	  pickBelt[1] = curr1;
+	  pickBelt[2] = curr2;
+	  pickHold = curr3;
+	  System.out.println("Getting packed: " + pickHold.getName());
+	  System.out.println("Belt spot 1: " + pickBelt[0].getName());
+	  System.out.println("Belt spot 2: " + pickBelt[1].getName());
+	  System.out.println("Belt spot 3: " + pickBelt[2].getName());
+	  
+	  Point curr4 = pickBelt[3];
+	  Point curr5 = pickBelt[4];
+	  Point curr6 = pickBelt[5];
+	  Point ready;
+	  System.out.println("Belt spot 4: " + pick1);
+	  System.out.println("Belt spot 5: " + pick2);
+	  System.out.println("Belt spot 6: " + pick3);
+	  pickBelt[1] = curr1;
+	  pickBelt[2] = curr2;
+	  ready = curr3;
+	  System.out.println("Getting packed: " + pickHold.getName());
+	  System.out.println("Belt spot 4: " + pickBelt[0].getName());
+	  System.out.println("Belt spot 5: " + pickBelt[1].getName());
+	  System.out.println("Belt spot 6: " + pickBelt[2].getName());
+	  
+	  
+	  
+	  
+  }
+  public void tick(int count){
+	  
+  }
  // private boolean isMovable();
   
 //   public static String getBeltItem(Point p){
